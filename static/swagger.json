@@ -1,0 +1,50 @@
+{
+    "swagger": "2.0",
+    "basePath": "/",
+    "paths": {
+        "/CreditRate": {
+            "post": {
+                "produces": ["application/json"],
+                "consumes": [
+                  "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "AI 신용점수",
+                        "required": true,
+                        "schema": {
+                          "$ref": "#/definitions/CreditRateBody"
+                        }
+                    }
+                ],
+                "description": "AI 신용점수",
+                "tags": ["CREDIT"],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "title": "TAXBY API",
+        "version": "0.0.12",
+        "description": "TAXBY API\n정상 사용가능 API\n- HOMETAX - GeneralIncomeTax(종합소득세 조회)\n- HOMETAX - CashReceipt(현금영수증 조회)\n- Delivery API - Yogiyo(요기요)\n- Delivery API - CoupangEats(쿠팡잇츠)\n- Business Search - businesssearch(사업자 조회)\n- Business Search - businessstatus(사업자 상태 조회)\n- 부동산 - address(주소 조회)\n- 부동산 - eais(새움터 건축물대장 조회)\n- 부동산 - apt(공동주택 가격 열람)\n- 부동산 - DH(개별주택 가격 열람)\n- 부동산 - Land(토지 개별 고시지가 열람)\n- 부동산 - LandPlan(토지e음 토지이용계획열람)\n- Review - naver_review(네이버 리뷰 수집)\n- Review - kakao_review(네이버 리뷰 수집)\n- Gov - gov_subsidy(민원24 보조금 조회)\n- Gov - gov_cash(민원24 보조금 현금 조회)\n- Utility - email(이메일 API)",
+        "termsOfService": "/"
+    },
+    "definitions": {
+    },
+    "produces": ["application/json"],
+    "consumes": ["multipart/form-data"],
+    "responses": {
+        "ParseError":{
+            "description": "parameter Error"
+        }
+    }
+}
