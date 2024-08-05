@@ -24,6 +24,45 @@
                     }
                 }
             }
+        },
+        "/abcmart": {
+            "get": {
+                "parameters": [{
+                        "in": "query",
+                        "name": "url",
+                        "description": "https://abcmart.a-rt.com/product/new?prdtNo=1010097305\nor\n1010097305",
+                        "required": true,
+                        "default": "https://abcmart.a-rt.com/product/new?prdtNo=1010097305",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "login id",
+                        "required": true,
+                        "default": "",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "pw",
+                        "description": "login password",
+                        "required": true,
+                        "default": "",
+                        "type": "string"
+                    }
+                ],
+                "description": "ABC마트 재고조회",
+                "tags": ["재고"],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "500": {
+                        "description": "Failure"
+                    }
+                }
+            }
         }
     },
     "info": {
